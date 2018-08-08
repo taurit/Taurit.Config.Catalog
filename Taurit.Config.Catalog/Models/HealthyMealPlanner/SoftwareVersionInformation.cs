@@ -5,9 +5,6 @@ namespace Taurit.Config.Catalog.Models.HealthyMealPlanner
 {
     public class SoftwareVersionInformation
     {
-        [JsonProperty]
-        public Version Version { get; private set; }
-
         [Obsolete("Do not use unless you are a deserializer")]
         private SoftwareVersionInformation()
         {
@@ -17,5 +14,7 @@ namespace Taurit.Config.Catalog.Models.HealthyMealPlanner
         {
             Version = version;
         }
+
+        [JsonProperty] public Version Version { get; private set; }
     }
 }
